@@ -15,6 +15,7 @@ interface KanbanBoardProps {
 
 export function KanbanBoard({ tasks, onUpdateTask, onDeleteTask, onAddTask }: KanbanBoardProps) {
   const [activeTask, setActiveTask] = useState<Task | null>(null);
+  const validStatuses: Task['status'][] = ['todo', 'in-progress', 'done'];
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -42,7 +43,12 @@ export function KanbanBoard({ tasks, onUpdateTask, onDeleteTask, onAddTask }: Ka
     if (!over) return;
 
     const taskId = active.id as string;
-    const newStatus = over.id as Task['status'];
+    const overId = String(over.id);
+    const newStatus = validStatuses.includes(overId as Task['status'])
+      ? (overId as Task['status'])
+      : tasks.find(t => t.id === overId)?.status;
+
+    if (!newStatus) return;
 
     const task = tasks.find(t => t.id === taskId);
     if (task && task.status !== newStatus) {
