@@ -8,7 +8,7 @@ A full-featured, browser-based project management tool built for developers. Thi
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS
 - **Drag & Drop**: @dnd-kit (core, sortable, utilities)

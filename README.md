@@ -1,175 +1,101 @@
 # Project Management Tool
 
-A full-featured project management application built for developers. Manage multiple projects with Kanban boards and todo lists, all stored locally in your browser.
+Kanban-style project and task management app with local-first storage.
+Built for fast execution tracking across multiple projects.
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8)
 
-## Features
+## Overview
 
-✨ **Project Management** - Create, switch, and manage multiple projects
-📊 **Kanban Board** - Visual task management with drag-and-drop
-✅ **Todo Lists** - Quick task tracking with checkboxes
-💾 **Local Storage** - All data persists in your browser
-🎨 **Beautiful UI** - Clean, modern interface with dark mode support
-📱 **Responsive** - Works great on desktop and mobile
+This application helps teams and individual builders manage execution without backend setup.
 
-## Quick Start
+- Create and switch between multiple projects
+- Track task flow with a drag-and-drop Kanban board
+- Maintain lightweight todos for quick follow-ups
+- Persist all data in browser `localStorage`
 
-### Installation
+## Core Features
 
-```bash
-# Clone the repository
-git clone <repository-url>
+- Multi-project workspace with create/switch/delete flows
+- Kanban board with Todo, In Progress, and Done columns
+- Drag-and-drop task status updates using `@dnd-kit`
+- Inline task editing and deletion
+- Per-project todo list with completion tracking
+- Responsive UI for desktop and mobile
 
-# Navigate to project directory
-cd project-management-tool
+## Tech Stack
 
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the application.
-
-## Usage
-
-1. **Create a Project** - Click "New Project" to get started
-2. **Add Tasks** - Use the Kanban board to create tasks in any column
-3. **Drag & Drop** - Move tasks between columns (Todo → In Progress → Done)
-4. **Add Todos** - Use the todo list for quick checklist items
-5. **Switch Projects** - Select different projects from the sidebar
-
-For detailed usage instructions, see [DOCUMENTATION.md](./DOCUMENTATION.md).
-
-## Technology Stack
-
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **@dnd-kit** - Drag and drop functionality
-- **localStorage** - Browser-based data persistence
+- Framework: Next.js 16 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- DnD: `@dnd-kit/core`, `@dnd-kit/sortable`, `@dnd-kit/utilities`
+- Storage: Browser `localStorage`
 
 ## Project Structure
 
-```
+```text
 project-management-tool/
-├── app/                    # Next.js app directory
-│   ├── page.tsx           # Main application page
-│   └── layout.tsx         # Root layout
-├── components/            # React components
-│   ├── KanbanBoard.tsx   # Kanban board with drag-and-drop
-│   ├── KanbanColumn.tsx  # Individual Kanban columns
-│   ├── TaskCard.tsx      # Task card component
-│   ├── TodoList.tsx      # Todo list component
-│   └── ...
-├── lib/                   # Utilities and types
-│   ├── types.ts          # TypeScript interfaces
-│   └── storage.ts        # localStorage utilities
-└── DOCUMENTATION.md       # Detailed documentation
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── KanbanBoard.tsx
+│   ├── KanbanColumn.tsx
+│   ├── TaskCard.tsx
+│   ├── TodoList.tsx
+│   ├── ProjectSelector.tsx
+│   └── CreateProjectModal.tsx
+├── lib/
+│   ├── types.ts
+│   └── storage.ts
+└── DOCUMENTATION.md
 ```
+
+## Quick Start
+
+```bash
+git clone https://github.com/abhilashrajjan-555/project-management-tool.git
+cd project-management-tool
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm start        # Start production server
-npm run lint     # Run ESLint
-```
-
-## Development
-
-### Prerequisites
-
-- Node.js 18+ or Bun
-- Modern browser with localStorage support
-
-### Type Checking
-
-```bash
-npx tsc --noEmit
-```
-
-### Linting
-
-```bash
+npm run dev
+npm run build
+npm start
 npm run lint
 ```
 
-## Features in Detail
+## Data & Persistence
 
-### Kanban Board
-- Three customizable columns (Todo, In Progress, Done)
-- Smooth drag-and-drop between columns
-- Inline editing of tasks
-- Task creation dates
-- Delete tasks with one click
+All project data is stored in browser `localStorage`.
 
-### Todo List
-- Quick add with Enter key
-- Check/uncheck completion status
-- Progress tracking (X/Y completed)
-- Simple deletion
+- No backend required
+- Works offline in the same browser profile
+- Data does not sync across devices by default
+- Clearing browser storage removes saved projects/tasks
 
-### Project Management
-- Unlimited projects
-- Project descriptions
-- Quick project switching
-- Bulk deletion
+## Use Cases
 
-## Data Storage
-
-All data is stored locally in your browser using localStorage. This means:
-
-✅ No server required
-✅ Works offline
-✅ Fast and responsive
-⚠️ Data is browser-specific (not synced across devices)
-⚠️ Clearing browser data will delete your projects
-
-## Browser Support
-
-- Chrome/Edge ✅
-- Firefox ✅
-- Safari ✅
-- Mobile browsers ✅
+- Personal project tracking
+- Lightweight team planning prototype
+- Internal workflow demos
+- Frontend architecture sample for local-first apps
 
 ## Documentation
 
-For comprehensive documentation, including:
-- Detailed feature descriptions
-- Architecture overview
-- TypeScript types
-- Customization guide
-- Troubleshooting
-
-See [DOCUMENTATION.md](./DOCUMENTATION.md).
-
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests (`npm run lint`, `npm run build`)
-5. Submit a pull request
+- Detailed guide: [DOCUMENTATION.md](./DOCUMENTATION.md)
+- Quick setup: [QUICK-START.md](./QUICK-START.md)
+- Build summary: [PROJECT-SUMMARY.md](./PROJECT-SUMMARY.md)
 
 ## License
 
-MIT License - feel free to use and modify for your projects.
-
-## Acknowledgments
-
-Built with:
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [@dnd-kit](https://dndkit.com/)
-
----
-
-**Need help?** Check out [DOCUMENTATION.md](./DOCUMENTATION.md) for detailed usage instructions.
+MIT.

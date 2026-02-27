@@ -1,6 +1,6 @@
 # Project Management Tool Documentation
 
-A full-featured project management application built with Next.js 15, TypeScript, and Tailwind CSS. This tool is designed for developers to manage their projects with Kanban boards and todo lists, all stored locally in the browser.
+A full-featured project management application built with Next.js 16, TypeScript, and Tailwind CSS. This tool is designed for developers to manage their projects with Kanban boards and todo lists, all stored locally in the browser.
 
 ## Features
 
@@ -28,7 +28,7 @@ A full-featured project management application built with Next.js 15, TypeScript
 
 ## Technology Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS
 - **Drag & Drop**: @dnd-kit/core, @dnd-kit/sortable, @dnd-kit/utilities

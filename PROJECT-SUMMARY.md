@@ -15,7 +15,7 @@ All requirements have been successfully implemented and tested.
 - Sidebar navigation for project selection
 
 ### 2. Next.js + Tailwind Implementation ✅
-- Built with Next.js 15 (App Router)
+- Built with Next.js 16 (App Router)
 - TypeScript strict mode
 - Tailwind CSS for all styling
 - Responsive design (mobile + desktop)
