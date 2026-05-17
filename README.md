@@ -16,6 +16,14 @@ This application helps teams and individual builders manage execution without ba
 - Maintain lightweight todos for quick follow-ups
 - Persist all data in browser `localStorage`
 
+## Problem
+
+Small builders and teams often need a simple execution board without setting up accounts, databases, or a full project management system.
+
+## Solution
+
+This app provides a local-first Kanban workspace that runs in the browser. Users can create projects, move tasks through a simple workflow, and track quick todos without backend infrastructure.
+
 ## Core Features
 
 - Multi-project workspace with create/switch/delete flows
@@ -89,6 +97,14 @@ All project data is stored in browser `localStorage`.
 - Lightweight team planning prototype
 - Internal workflow demos
 - Frontend architecture sample for local-first apps
+
+## What This Shows
+
+- Local-first product design
+- Drag-and-drop task workflow implementation
+- Clear React component separation
+- Browser persistence with explicit limitations
+- Practical MVP scope control
 
 ## Documentation
 
